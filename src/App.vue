@@ -2,6 +2,7 @@
 <div id ="app">
   <router-link to = "/pokemon1" tag="button" replace>耿鬼</router-link> 
    <router-link to ="/pokemon2" tag="button" replace>超梦</router-link>
+    <router-link v-bind:to ="'/User/'+userid" tag="button" replace>用户</router-link>
  
  
   <!-- router-link最终会渲染成a标签 -->
@@ -20,6 +21,12 @@
 <script>
 export default{
   name:'app',
+  data(){
+    return{
+      userid:'zhangsan',
+     
+    }
+  },
   methods:{
     pokemon1Click(){
        // 通过代码的方式修改路由vue-router,this当前组件的router属性，里边的push方法
