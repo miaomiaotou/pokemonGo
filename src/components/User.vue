@@ -10,7 +10,7 @@
 export default {
     name:'user',
     computed:{
-        // computed属性和methods属性不一样
+        // computed属性和methods不一样，mathod按照方法调用
         userid(){
             return this.$route.params.abc
             // $route跟$router不一样，$route谁处于活跃拿到当前组件 的userid
